@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/dog/dog",
+        "pages/cat/cat"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "packageB",
+      "pages": [
+        "pages/apple/apple",
+        "pages/banana/banana"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "packageA/pages/dog/dog": {
+      "network": "all",
+      "packages": ["packageB"]
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
